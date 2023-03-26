@@ -8,7 +8,7 @@ class Seller
 {
 public:
 	Seller(std::string name, std::string lastName, std::string sellerCode);
-	void addQuote(Quote quote);
+	void addQuote(int garmentType, bool shortSleeve, bool maoNeck, bool slim, int qualityType, float unitPrice, int quantity);
 	std::string getName() { return this->name; }
 	std::string getSellerCode() { return this->sellerCode; }
 	std::string getlastName() { return this->lastName; }

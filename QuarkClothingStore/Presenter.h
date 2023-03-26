@@ -13,8 +13,6 @@ private:
 	IView* m_view = nullptr;
 	Seller* m_seller = nullptr;
 	Store* m_store = nullptr;
-	int idQuote = 0;
-	std::string buildGarmentCode(int garmentType, bool shortSleeve, bool maoNeck, bool slim, int qualityType);
 public:
 	explicit Presenter(IView* view);
 	~Presenter();

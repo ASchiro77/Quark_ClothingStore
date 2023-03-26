@@ -1,16 +1,6 @@
 ﻿  Main.cpp
-  Seller.cpp
-  Quote.cpp
-  Shirt.cpp
-  Quality.cpp
   Presenter.cpp
-C:\Users\schir\OneDrive\Escritorio\QuarkClothingStore\Quark_ClothingStore\QuarkClothingStore\Presenter.cpp(72,17): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\schir\OneDrive\Escritorio\QuarkClothingStore\Quark_ClothingStore\QuarkClothingStore\Presenter.cpp(76,17): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\schir\OneDrive\Escritorio\QuarkClothingStore\Quark_ClothingStore\QuarkClothingStore\Presenter.cpp(80,17): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\schir\OneDrive\Escritorio\QuarkClothingStore\Quark_ClothingStore\QuarkClothingStore\Presenter.cpp(84,17): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-  Setup.cpp
   View.cpp
-  Store.cpp
   Generando código...
 C:\Users\schir\OneDrive\Escritorio\QuarkClothingStore\Quark_ClothingStore\QuarkClothingStore\View.cpp(164): warning C4715: 'View::showUnitPrice': no todas las rutas de acceso de control devuelven un valor
 C:\Users\schir\OneDrive\Escritorio\QuarkClothingStore\Quark_ClothingStore\QuarkClothingStore\View.cpp(130): warning C4715: 'View::showStep': no todas las rutas de acceso de control devuelven un valor

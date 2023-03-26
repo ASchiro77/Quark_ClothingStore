@@ -36,5 +36,6 @@ public:
 	void setStoreData(const Store* store) override;
 	void setQuoteHistory(std::vector<Quote> his) override;
 	void setStock(int stock) override;
+	void setError(const std::string message) override;
 };
 #endif //VIEW_H

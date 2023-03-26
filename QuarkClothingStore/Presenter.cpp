@@ -22,70 +22,34 @@ Presenter::~Presenter()
 
 void Presenter::getQuoteHistory()
 {
-	auto quoteHistory = m_seller->getQuoteHistory();
-	m_view->setQuoteHistory(quoteHistory);
+	try {
+		auto quoteHistory = m_seller->getQuoteHistory();
+		m_view->setQuoteHistory(quoteHistory);
+	}
+	catch (int e) {
+		m_view->setError("Error en al obtener el hitorial de cotizaciones.Error: " + std::to_string(e));
+	}
 }
-
-std::string Presenter::buildGarmentCode(int garmentType, bool shortSleeve, bool maoNeck, bool slim, int qualityType) {
-	std::string aux = "";
-	if (garmentType == 1) {
-		aux += "S";
-		if (shortSleeve) { aux += "S"; }
-		if (maoNeck) { aux += "M"; }
-	}
-	else {
-		aux += "P";
-		if (slim) { aux += "S"; }
-	}
-
-	if (qualityType == 1) {
-		aux += STANDARD_DESCRIPTION;
-	}
-	else {
-		aux += PREMIUM_DESCRIPTION;
-	}
-
-	return aux;
-};
 
 void Presenter::getStock(int garmentType, bool shortSleeve, bool maoNeck, bool slim, int qualityType)
 {
-	int stock = m_store->getStock( this->buildGarmentCode(garmentType, shortSleeve, maoNeck, slim, qualityType) );
-	m_view->setStock(stock);
+	try {
+		int stock = m_store->getStock(garmentType, shortSleeve, maoNeck, slim, qualityType);
+		m_view->setStock(stock);
+	}
+	catch (int e) {
+		m_view->setError("Error en al obtener el stock.Error: " + std::to_string(e));
+	}
 }
 
 void Presenter::saveQuote(int garmentType, bool shortSleeve, bool maoNeck, bool slim, int qualityType, float unitPrice, int quantity)
 {
-	std::string garmentCode = this->buildGarmentCode(garmentType, shortSleeve, maoNeck, slim, qualityType);
-
-	Garment* g;
-	if (garmentType == 1) {
-		g = new Shirt(shortSleeve, maoNeck, quantity, unitPrice, qualityType);
+	try {
+		m_seller->addQuote(garmentType, shortSleeve, maoNeck, slim, qualityType, unitPrice, quantity);
+		m_store->discountStock(garmentType, shortSleeve, maoNeck, slim, qualityType, quantity);
 	}
-	else {
-		g = new Pants(slim, quantity, unitPrice, qualityType);
+	catch(int e){
+		m_view->setError("Error en al guardar la cotización.Error: " + std::to_string(e));
 	}
-
-	float total = quantity * unitPrice;
-
-	if (shortSleeve) {
-		total = total - (total * 0.1); //- 10%
-	}
-
-	if (maoNeck) {
-		total = total + (total * 0.03); // + 3%
-	}
-
-	if (slim) {
-		total = total - (total * 0.12); // -12%
-	}
-
-	if (qualityType == 1) {
-		total = total + (total * 0.3); // + 30%
-	}
-	idQuote++;
-	Quote quote = Quote(idQuote, m_seller->getSellerCode(), quantity, total, g);
-
-	m_seller->addQuote(quote);
-	m_store->discountStock(garmentCode, quantity);
+	
 }

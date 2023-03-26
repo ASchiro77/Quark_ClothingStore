@@ -20,5 +20,6 @@ public:
 	virtual void setStoreData(const Store* store) = 0;
 	virtual void setQuoteHistory(std::vector<Quote> his) = 0;
 	virtual void setStock(const int stock) = 0;
+	virtual void setError(const std::string message) = 0;
 };
 #endif // IVIEW_H

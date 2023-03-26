@@ -163,6 +163,8 @@ float View::showUnitPrice(const std::string& step, const std::string& stepDesc) 
 	showMainMenu();
 }
 
+
+
 void View::setStock(const int stock)
 {
 	m_stock = stock;
@@ -176,6 +178,11 @@ void View::setSellerData(const Seller* seller)
 void View::setStoreData(const Store* store)
 {
 	m_store = (Store*)store;
+}
+
+void View::setError(const std::string m)
+{
+	this->showErrorMessage(m);
 }
 
 void View::setQuoteHistory(const std::vector<Quote> his)
