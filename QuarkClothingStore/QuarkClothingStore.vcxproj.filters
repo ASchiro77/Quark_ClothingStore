@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Archivos de encabezado">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Archivos de recursos">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="App">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Domain">
+      <UniqueIdentifier>{6a223fbd-eec2-4717-90cb-13d80c3f2ed8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Presenter">
+      <UniqueIdentifier>{8b368f68-3a03-4314-a9f9-970a993a7bbb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="View">
+      <UniqueIdentifier>{32a2c407-f570-488a-be28-e05af19343a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain\Seller">
+      <UniqueIdentifier>{d338cbf4-cef0-42f4-8ac4-18aeead63a22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain\Quote">
+      <UniqueIdentifier>{30da46c0-de6d-4a7d-b199-d221763b7e1e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain\Store">
+      <UniqueIdentifier>{e6431637-d0be-4ba2-b989-ccfaf1c7b5da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain\Garment">
+      <UniqueIdentifier>{43ff4413-4ec7-4c54-97e4-9cdbc7342e67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain\Garment\Types">
+      <UniqueIdentifier>{aee13ec9-db9d-4eea-b07d-05c4beb54888}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain\Garment\Types\Shirt">
+      <UniqueIdentifier>{b2859bb2-8fc9-447a-a76f-f8bc5debaa99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain\Garment\Types\Pants">
+      <UniqueIdentifier>{2f637502-29cc-4d4e-a66a-ec35744bb5ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain\Quality">
+      <UniqueIdentifier>{470996f2-58ef-474f-8255-d02fe07ef35c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="View\IView">
+      <UniqueIdentifier>{69885263-ef35-4416-957f-bd11a69b5ce6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="View\View Class">
+      <UniqueIdentifier>{6e03ca1e-e613-4e94-adf1-516052d143d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Presenter\Presenter Class">
+      <UniqueIdentifier>{cffbe212-bc2e-4e73-b2ba-80653300dcbf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Domain\Setup">
+      <UniqueIdentifier>{69ac063a-d3b0-48dc-90b1-363501d5b0b1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp">
+      <Filter>App</Filter>
+    </ClCompile>
+    <ClCompile Include="Seller.cpp">
+      <Filter>Domain\Seller</Filter>
+    </ClCompile>
+    <ClCompile Include="Quote.cpp">
+      <Filter>Domain\Quote</Filter>
+    </ClCompile>
+    <ClCompile Include="Store.cpp">
+      <Filter>Domain\Store</Filter>
+    </ClCompile>
+    <ClCompile Include="Shirt.cpp">
+      <Filter>Domain\Garment\Types\Shirt</Filter>
+    </ClCompile>
+    <ClCompile Include="Quality.cpp">
+      <Filter>Domain\Quality</Filter>
+    </ClCompile>
+    <ClCompile Include="View.cpp">
+      <Filter>View\View Class</Filter>
+    </ClCompile>
+    <ClCompile Include="Presenter.cpp">
+      <Filter>Presenter\Presenter Class</Filter>
+    </ClCompile>
+    <ClCompile Include="Setup.cpp">
+      <Filter>Domain\Setup</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Seller.h">
+      <Filter>Domain\Seller</Filter>
+    </ClInclude>
+    <ClInclude Include="Quote.h">
+      <Filter>Domain\Quote</Filter>
+    </ClInclude>
+    <ClInclude Include="Store.h">
+      <Filter>Domain\Store</Filter>
+    </ClInclude>
+    <ClInclude Include="Garment.h">
+      <Filter>Domain\Garment</Filter>
+    </ClInclude>
+    <ClInclude Include="Shirt.h">
+      <Filter>Domain\Garment\Types\Shirt</Filter>
+    </ClInclude>
+    <ClInclude Include="Pants.h">
+      <Filter>Domain\Garment\Types\Pants</Filter>
+    </ClInclude>
+    <ClInclude Include="Quality.h">
+      <Filter>Domain\Quality</Filter>
+    </ClInclude>
+    <ClInclude Include="IView.h">
+      <Filter>View\IView</Filter>
+    </ClInclude>
+    <ClInclude Include="View.h">
+      <Filter>View\View Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Presenter.h">
+      <Filter>Presenter\Presenter Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Setup.h">
+      <Filter>Domain\Setup</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
