@@ -48,9 +48,13 @@ void View::showTitle(const std::string& text)
 
 bool View::isDigit(const std::string& text) {
 
+	const char p = '.';
 	for (int i = 0; i < text.size(); i++) {
-		if (!isdigit(text[i])) {
-			return false;
+		if (!isdigit(text[i]))
+		{
+			if (text[i] != p) {
+				return false;
+			}
 		}
 	}
 	return true;
@@ -88,7 +92,7 @@ void View::showErrorMessage(const std::string& message)
 int View::showStep(const std::string & step, const std::string& stepDesc, const std::vector<std::string> opt, const std::string& title)
 {
 	std::string optionString = "";
-	bool isValidOption = true;
+	bool exitCondition = false;
 
 	do
 	{
@@ -109,22 +113,36 @@ int View::showStep(const std::string & step, const std::string& stepDesc, const 
 		}
 
 		std::cin >> optionString;
+		std::system("cls");
 		if (optionString == "3")
 		{
-			isValidOption = true;
+			exitCondition = true;
 		}
 		else 
 		{
-			if(!this->isDigit(optionString) && opt.size() <= stoi(optionString))
+			if(!this->isDigit(optionString))
 			{
 				showText(INVALID_OPTION_MESSAGE);
 				std::cin.get();
+				showText("");
+				showText(ANY_KEY_MESSAGE);
 			}
-			
-			return stoi(optionString);
+			else if (step != "5" && opt.size() + 1 <= stoi(optionString))
+			{
+				showText(INVALID_OPTION_MESSAGE);
+				std::cin.get();
+				showText("");
+				showText(ANY_KEY_MESSAGE);
+			}
+			else {
+				return stoi(optionString);
+			}
+	
+
+		
 		}
 		std::cin.get();
-	} while (!isValidOption);
+	} while (!exitCondition);
 
 	showMainMenu();
 }
@@ -134,7 +152,7 @@ int View::showStep(const std::string & step, const std::string& stepDesc, const 
 float View::showUnitPrice(const std::string& step, const std::string& stepDesc) {
 
 	std::string optionString = "";
-	bool isValidOption = true;
+	bool isValidOption = false;
 
 	do
 	{
@@ -143,6 +161,7 @@ float View::showUnitPrice(const std::string& step, const std::string& stepDesc) 
 		showText("PASO " + step + ": " + stepDesc);
 
 		std::cin >> optionString;
+		std::system("cls");
 		if (optionString == "3")
 		{
 			isValidOption = true;
@@ -153,9 +172,14 @@ float View::showUnitPrice(const std::string& step, const std::string& stepDesc) 
 			{
 				showText(INVALID_OPTION_MESSAGE);
 				std::cin.get();
+				showText("");
+				showText(ANY_KEY_MESSAGE);
+			}
+			else {
+				float val = stof(optionString);
+				return val;
 			}
 
-			return stof(optionString);
 		}
 		std::cin.get();
 	} while (!isValidOption);
@@ -228,6 +252,7 @@ void View::showQuoteHistory(bool onlyShowLastInput)
 		showText("Presiona 3 para volver al menú principal");
 		showText("---------------------------------------------------------------------");
 		std::cin >> optionString;
+		std::system("cls");
 		if (optionString == "3")
 		{
 			isValidOption = true;

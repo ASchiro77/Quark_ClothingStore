@@ -34,7 +34,7 @@ void Seller::addQuote(int garmentType, bool shortSleeve, bool maoNeck, bool slim
 		total = total - (total * 0.12); // -12%
 	}
 
-	if (qualityType == 1) {
+	if (qualityType == 2) {
 		total = total + (total * 0.3); // + 30%
 	}
 	int idQuote = this->quoteHistory.size() + 1;;

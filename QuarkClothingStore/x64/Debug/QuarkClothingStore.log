@@ -1,7 +1,10 @@
-﻿  Main.cpp
-  Presenter.cpp
-  View.cpp
+﻿  Presenter.cpp
+  Seller.cpp
+C:\Users\schir\OneDrive\Escritorio\Quark_Store\Quark_ClothingStore\QuarkClothingStore\Seller.cpp(26,17): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\schir\OneDrive\Escritorio\Quark_Store\Quark_ClothingStore\QuarkClothingStore\Seller.cpp(30,17): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\schir\OneDrive\Escritorio\Quark_Store\Quark_ClothingStore\QuarkClothingStore\Seller.cpp(34,17): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\schir\OneDrive\Escritorio\Quark_Store\Quark_ClothingStore\QuarkClothingStore\Seller.cpp(38,17): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\schir\OneDrive\Escritorio\Quark_Store\Quark_ClothingStore\QuarkClothingStore\Seller.cpp(40,45): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+  Setup.cpp
   Generando código...
-C:\Users\schir\OneDrive\Escritorio\QuarkClothingStore\Quark_ClothingStore\QuarkClothingStore\View.cpp(164): warning C4715: 'View::showUnitPrice': no todas las rutas de acceso de control devuelven un valor
-C:\Users\schir\OneDrive\Escritorio\QuarkClothingStore\Quark_ClothingStore\QuarkClothingStore\View.cpp(130): warning C4715: 'View::showStep': no todas las rutas de acceso de control devuelven un valor
-  QuarkClothingStore.vcxproj -> C:\Users\schir\OneDrive\Escritorio\QuarkClothingStore\Quark_ClothingStore\x64\Debug\QuarkClothingStore.exe
+  QuarkClothingStore.vcxproj -> C:\Users\schir\OneDrive\Escritorio\Quark_Store\Quark_ClothingStore\x64\Debug\QuarkClothingStore.exe

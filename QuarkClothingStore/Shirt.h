@@ -39,7 +39,7 @@ public:
 		}
 
 		if (maoNeck) {
-			aux += aux + "M";
+			aux += "M";
 		}
 
 		return  aux;
